@@ -727,13 +727,13 @@
     }
   }
 };
-            defs["ErrorResponse"] = {
+            defs["KaKaoResponse"] = {
   "type" : "object",
   "properties" : {
-    "error" : {
+    "errorType" : {
       "type" : "string"
     },
-    "error_description" : {
+    "message" : {
       "type" : "string"
     }
   }
@@ -1218,7 +1218,7 @@ except ApiException as e:
   "content" : {
     "*/*" : {
       "schema" : {
-        "$ref" : "#/components/schemas/ErrorResponse"
+        "$ref" : "#/components/schemas/KaKaoResponse"
       }
     }
   }
@@ -1266,7 +1266,7 @@ except ApiException as e:
   "content" : {
     "*/*" : {
       "schema" : {
-        "$ref" : "#/components/schemas/ErrorResponse"
+        "$ref" : "#/components/schemas/KaKaoResponse"
       }
     }
   }
